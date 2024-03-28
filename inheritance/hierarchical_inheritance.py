@@ -1,9 +1,11 @@
+# Hierarchical Inheritance: more than one child class are created from a single parent class.
+
 class Animal:
     def __init__(self, species):
         self.species = species
 
     def make_sound(self):
-        pass  # Placeholder method, to be overridden by subclasses
+        return "Some generic sound"
 
 
 class Dog(Animal):
@@ -24,13 +26,14 @@ class Cat(Animal):
         return "Meow!"
 
 
-# Usage
+# Creating instances of the classes
 dog = Dog("Buddy")
-print(dog.name)            # Output: Buddy
-print(dog.species)         # Output: Dog
-print(dog.make_sound())    # Output: Woof!
+print(dog.species)        # Output: Dog
+print(dog.name)           # Output: Buddy
+print(dog.make_sound())   # Output: Woof!
 
 cat = Cat("Whiskers")
-print(cat.name)            # Output: Whiskers
-print(cat.species)         # Output: Cat
-print(cat.make_sound())    # Output: Meow!
+print(cat.species)        # Output: Cat
+print(cat.name)           # Output: Whiskers
+print(cat.make_sound())   # Output: Meow!
+
